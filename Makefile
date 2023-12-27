@@ -10,7 +10,7 @@ NV_CODEC_HEADERS := "n11.1.5.3" # cuda headers https://git.videolan.org/?p=ffmpe
 
 
 .PHONY: package
-package: ## generate the debian package
+package: build ## generate the debian package
 	@echo "pacakging avidemux"
 	@docker build \
 		--build-arg="MAINTAINER=$(MAINTAINER)" \
