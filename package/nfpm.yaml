@@ -1,0 +1,54 @@
+---
+name: "avidemux-qt5"
+arch: "amd64"
+platform: "linux"
+version: "#AVIDEMUX_VERSION#"
+section: "video"
+priority: "optional"
+replaces:
+- foobar
+provides:
+depends:
+  - libc6 (>= 2.29)
+  - libgcc-s1 (>= 3.0)
+  - libgl1
+  - libglu1-mesa | libglu1
+  - libqt5core5a (>= 5.15.1)
+  - libqt5gui5 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1)
+  - libqt5network5 (>= 5.0.2)
+  - libqt5widgets5 (>= 5.4.0)
+  - libstdc++6 (>= 5.2)
+  - libx11-6
+  - libx264-164
+  - libx265-199
+  - libxext6
+  - libxv1
+
+recommends:
+  - mjpegtools
+  - twolame
+  - lame
+suggests:
+conflicts:
+maintainer: "#MAINTAINER# <#MAIL#>"
+description: Free video editor (QT version)
+  Avidemux is a free video editor designed for simple cutting, filtering and
+  encoding tasks. It supports many file types, including AVI, DVD compatible
+  MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated
+  using projects, job queue and powerful scripting capabilities.
+  .
+  This package contains the QT version.
+vendor: ""
+homepage: "#WEB#"
+license: ""
+contents:
+- src: ./usr/share
+  dst: /usr/share
+- src: ./usr/lib
+  dst: /usr/lib
+- src: ./usr/bin/avidemux3_cli
+  dst: /usr/bin/avidemux-cli
+- src: ./usr/bin/avidemux3_jobs_qt5
+  dst: /usr/bin/avidemux-jobs-qt5
+- src: ./usr/bin/avidemux3_qt5
+  dst: /usr/bin/avidemux-qt5
